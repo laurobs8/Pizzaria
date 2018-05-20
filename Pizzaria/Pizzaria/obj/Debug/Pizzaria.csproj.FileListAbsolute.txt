@@ -1,0 +1,11 @@
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.csprojResolveAssemblyReference.cache
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.Properties.Resources.resources
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.UI.FormPizzaria.resources
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.csproj.GenerateResource.cache
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.csproj.CoreCompileInputs.cache
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\bin\Debug\Pizzaria.exe.config
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\bin\Debug\Pizzaria.exe
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\bin\Debug\Pizzaria.pdb
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.exe
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.pdb
+C:\Users\lauro-pc\Desktop\Faculdade\Programação Orientado\AgoraVai\Pizzaria\Pizzaria\obj\Debug\Pizzaria.UI.FormEscolhaPizza.resources
