@@ -31,18 +31,18 @@
             this.ListViewItensPedido = new System.Windows.Forms.ListView();
             this.ButtonSalvar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RadioPagamentoDinheiro = new System.Windows.Forms.RadioButton();
             this.RadioPagamentoCartao = new System.Windows.Forms.RadioButton();
+            this.RadioPagamentoDinheiro = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.RadioEntregaResidencia = new System.Windows.Forms.RadioButton();
             this.RadioEntregaLocal = new System.Windows.Forms.RadioButton();
-            this.comboBoxPizza = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBoxPizza = new System.Windows.Forms.ComboBox();
+            this.UpDownQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.DropDownTamanho = new System.Windows.Forms.ComboBox();
             this.AdicionarPedido = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDownQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // ListViewItensPedido
@@ -62,6 +62,7 @@
             this.ButtonSalvar.TabIndex = 1;
             this.ButtonSalvar.Text = "Salvar";
             this.ButtonSalvar.UseVisualStyleBackColor = true;
+            this.ButtonSalvar.Click += new System.EventHandler(this.ButtonSalvar_Click);
             // 
             // groupBox1
             // 
@@ -74,18 +75,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Forma de Pagamento";
             // 
-            // RadioPagamentoDinheiro
-            // 
-            this.RadioPagamentoDinheiro.AutoSize = true;
-            this.RadioPagamentoDinheiro.Location = new System.Drawing.Point(6, 30);
-            this.RadioPagamentoDinheiro.Name = "RadioPagamentoDinheiro";
-            this.RadioPagamentoDinheiro.Size = new System.Drawing.Size(64, 17);
-            this.RadioPagamentoDinheiro.TabIndex = 0;
-            this.RadioPagamentoDinheiro.TabStop = true;
-            this.RadioPagamentoDinheiro.Text = "Dinheiro";
-            this.RadioPagamentoDinheiro.UseVisualStyleBackColor = true;
-            this.RadioPagamentoDinheiro.CheckedChanged += new System.EventHandler(this.RadioPagamentoDinheiro_CheckedChanged);
-            // 
             // RadioPagamentoCartao
             // 
             this.RadioPagamentoCartao.AutoSize = true;
@@ -97,6 +86,18 @@
             this.RadioPagamentoCartao.Text = "Cartão";
             this.RadioPagamentoCartao.UseVisualStyleBackColor = true;
             this.RadioPagamentoCartao.CheckedChanged += new System.EventHandler(this.RadioPagamentoCartao_CheckedChanged);
+            // 
+            // RadioPagamentoDinheiro
+            // 
+            this.RadioPagamentoDinheiro.AutoSize = true;
+            this.RadioPagamentoDinheiro.Location = new System.Drawing.Point(6, 30);
+            this.RadioPagamentoDinheiro.Name = "RadioPagamentoDinheiro";
+            this.RadioPagamentoDinheiro.Size = new System.Drawing.Size(64, 17);
+            this.RadioPagamentoDinheiro.TabIndex = 0;
+            this.RadioPagamentoDinheiro.TabStop = true;
+            this.RadioPagamentoDinheiro.Text = "Dinheiro";
+            this.RadioPagamentoDinheiro.UseVisualStyleBackColor = true;
+            this.RadioPagamentoDinheiro.CheckedChanged += new System.EventHandler(this.RadioPagamentoDinheiro_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -133,29 +134,35 @@
             this.RadioEntregaLocal.UseVisualStyleBackColor = true;
             this.RadioEntregaLocal.CheckedChanged += new System.EventHandler(this.RadioEntregaLocal_CheckedChanged);
             // 
-            // comboBoxPizza
+            // ComboBoxPizza
             // 
-            this.comboBoxPizza.FormattingEnabled = true;
-            this.comboBoxPizza.Location = new System.Drawing.Point(305, 12);
-            this.comboBoxPizza.Name = "comboBoxPizza";
-            this.comboBoxPizza.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxPizza.TabIndex = 4;
+            this.ComboBoxPizza.FormattingEnabled = true;
+            this.ComboBoxPizza.Location = new System.Drawing.Point(305, 12);
+            this.ComboBoxPizza.Name = "ComboBoxPizza";
+            this.ComboBoxPizza.Size = new System.Drawing.Size(121, 21);
+            this.ComboBoxPizza.TabIndex = 4;
+            this.ComboBoxPizza.SelectedIndexChanged += new System.EventHandler(this.ComboBoxPizza_SelectedIndexChanged);
             // 
-            // numericUpDown1
+            // UpDownQuantidade
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(384, 39);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.UpDownQuantidade.Location = new System.Drawing.Point(384, 39);
+            this.UpDownQuantidade.Name = "UpDownQuantidade";
+            this.UpDownQuantidade.Size = new System.Drawing.Size(42, 20);
+            this.UpDownQuantidade.TabIndex = 5;
+            this.UpDownQuantidade.ValueChanged += new System.EventHandler(this.UpDownQuantidade_ValueChanged);
             // 
-            // comboBox2
+            // DropDownTamanho
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(351, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(75, 21);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.DropDownTamanho.FormattingEnabled = true;
+            this.DropDownTamanho.Items.AddRange(new object[] {
+            "Pequeno",
+            "Medio",
+            "Grande"});
+            this.DropDownTamanho.Location = new System.Drawing.Point(351, 65);
+            this.DropDownTamanho.Name = "DropDownTamanho";
+            this.DropDownTamanho.Size = new System.Drawing.Size(75, 21);
+            this.DropDownTamanho.TabIndex = 6;
+            this.DropDownTamanho.SelectedIndexChanged += new System.EventHandler(this.DropDownTamanho_SelectedIndexChanged);
             // 
             // AdicionarPedido
             // 
@@ -173,9 +180,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 287);
             this.Controls.Add(this.AdicionarPedido);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBoxPizza);
+            this.Controls.Add(this.DropDownTamanho);
+            this.Controls.Add(this.UpDownQuantidade);
+            this.Controls.Add(this.ComboBoxPizza);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ButtonSalvar);
@@ -186,7 +193,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDownQuantidade)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,9 +208,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton RadioEntregaResidencia;
         private System.Windows.Forms.RadioButton RadioEntregaLocal;
-        private System.Windows.Forms.ComboBox comboBoxPizza;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox ComboBoxPizza;
+        private System.Windows.Forms.NumericUpDown UpDownQuantidade;
+        private System.Windows.Forms.ComboBox DropDownTamanho;
         private System.Windows.Forms.Button AdicionarPedido;
     }
 }

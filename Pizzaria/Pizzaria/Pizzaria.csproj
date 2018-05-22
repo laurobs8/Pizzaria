@@ -46,7 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControllerCadastroCliente.cs" />
-    <Compile Include="Controllers\EscolhaPizza.cs" />
+    <Compile Include="Controllers\ControllerEscolhaPizza.cs" />
+    <Compile Include="DAL\Repositorio.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\FormaDeEntrega.cs" />
     <Compile Include="Modelos\FormaDePagamento.cs" />
@@ -96,7 +97,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\" />
+    <Content Include="QueryDBCreation.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

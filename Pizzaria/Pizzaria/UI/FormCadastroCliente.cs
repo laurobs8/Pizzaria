@@ -23,12 +23,9 @@ namespace Pizzaria.UI
         private void ButtonConfirmar_Click(object sender, EventArgs e)
         {
             var sucesso = controller.SalvarCliente();
-
-
-
             if (sucesso)
             {
-                var form = new FormEscolhaPizza();
+                var form = new FormEscolhaPizza(controller.Cliente);
                 form.Show();
             }
             else
@@ -40,7 +37,6 @@ namespace Pizzaria.UI
         private void TextBoxNome_TextChanged(object sender, EventArgs e)
         {
             controller.Cliente.Nome = TextBoxNome.Text;
-
         }
 
         private void TextBoxEndereco_TextChanged(object sender, EventArgs e)
@@ -51,6 +47,11 @@ namespace Pizzaria.UI
         private void TextBoxTelefone_TextChanged(object sender, EventArgs e)
         {
             controller.Cliente.Telefone = TextBoxTelefone.Text;
+        }
+
+        private void ButtonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

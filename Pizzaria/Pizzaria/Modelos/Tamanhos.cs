@@ -8,8 +8,8 @@ namespace Pizzaria.Modelos
 {
     enum Tamanhos
     {
-        Grande,
-        Meia,
-        Pequena
+        Pequena,
+        Media,
+        Grande
     }
 }

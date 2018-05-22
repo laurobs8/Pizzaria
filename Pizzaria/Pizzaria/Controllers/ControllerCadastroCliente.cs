@@ -1,9 +1,6 @@
-﻿using Pizzaria.Modelos;
+﻿using Pizzaria.DAL;
+using Pizzaria.Modelos;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pizzaria.Controllers
 {
@@ -16,6 +13,15 @@ namespace Pizzaria.Controllers
             if (string.IsNullOrWhiteSpace(Cliente.Nome)    ||
                 string.IsNullOrWhiteSpace(Cliente.Endereco) ||
                 string.IsNullOrWhiteSpace(Cliente.Telefone))
+            {
+                return false;
+            }
+
+            try
+            {
+                Database.SalvarCliente(Cliente);
+            }
+            catch (Exception ex)
             {
                 return false;
             }
